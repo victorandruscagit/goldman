@@ -6,6 +6,8 @@ import ru.javabegin.training.goldman.enums.GameObjectType;
 import javax.swing.ImageIcon;
 import ru.javabegin.training.goldman.interfaces.StaticObject;
 
+import java.util.Objects;
+
 /**
  * класс, который отвечает за любой объект, созданный в игре. задает все общие
  * характеристики объектов в игре
@@ -52,5 +54,25 @@ public abstract class AbstractGameObject implements StaticObject {
         this.coordinate = coordinate;
     }
 
-   
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AbstractGameObject that = (AbstractGameObject) o;
+        return type == that.type && coordinate.equals(that.coordinate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, coordinate);
+    }
+
+    @Override
+    public String toString() {
+        return "AbstractGameObject{" +
+                "type=" + type +
+                ", coordinate=" + coordinate +
+                ", icon=" + icon +
+                '}';
+    }
 }
