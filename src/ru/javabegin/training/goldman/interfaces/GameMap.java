@@ -6,11 +6,10 @@ public interface GameMap {
 
     int getWidth();
 
-    boolean createMap();
 
-    boolean loadMap();
+    boolean loadMap(Object source);
 
-    boolean saveMap();
+    boolean saveMap(Object source);
 
     boolean drawMap();
 
