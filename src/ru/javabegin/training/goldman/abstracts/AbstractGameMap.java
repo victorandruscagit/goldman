@@ -36,7 +36,7 @@ public abstract class AbstractGameMap implements GameMap, Serializable {
     }
 
     public void addGameObject(AbstractGameObject gameObject) {
-        gameObjects.put(gameObject.getCoordinate(), gameObject);
+
         ArrayList<AbstractGameObject> tempList = typeObjects.get(gameObject.getType());
         if (tempList == null) {
             tempList = new ArrayList<>();
