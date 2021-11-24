@@ -26,6 +26,10 @@ public class GameObjectCreator {
             case WALL:
                 obj = new Wall(coordinate);
                 break;
+            case MONSTER:
+                obj = new Monster(coordinate);
+                break;
+
             case TREASURE:
                 obj = new Treasure(coordinate);
                 break;

@@ -1,12 +1,12 @@
 package ru.javabegin.training.goldman.abstracts;
 
-import ru.javabegin.training.goldman.abstracts.AbstractGameObject;
 import ru.javabegin.training.goldman.enums.GameObjectType;
-import ru.javabegin.training.goldman.interfaces.GameMap;
+import ru.javabegin.training.goldman.interfaces.gamemap.GameMap;
 import ru.javabegin.training.goldman.objects.Coordinate;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.EnumMap;
 import java.util.HashMap;
 
@@ -20,6 +20,14 @@ public abstract class AbstractGameMap implements GameMap, Serializable {
 
     private boolean isExitExists;
     private boolean isGoldmanExists;
+
+    public HashMap<Coordinate, AbstractGameObject> getGameObjects() {
+        return gameObjects;
+    }
+
+    public EnumMap<GameObjectType, ArrayList<AbstractGameObject>> getTypeObjects() {
+        return typeObjects;
+    }
 
     private HashMap<Coordinate, AbstractGameObject> gameObjects = new HashMap<>();
 
@@ -109,5 +117,8 @@ public abstract class AbstractGameMap implements GameMap, Serializable {
     @Override
     public int getTimeLimit() {
         return timeLimit;
+    }
+    public Collection<AbstractGameObject> getAllGameObjects() {
+        return gameObjects.values();
     }
 }

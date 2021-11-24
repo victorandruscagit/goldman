@@ -1,4 +1,4 @@
-package ru.javabegin.training.goldman.interfaces;
+package ru.javabegin.training.goldman.interfaces.gameobjects;
 
 import ru.javabegin.training.goldman.abstracts.AbstractGameObject;
 import ru.javabegin.training.goldman.enums.MovingDirection;

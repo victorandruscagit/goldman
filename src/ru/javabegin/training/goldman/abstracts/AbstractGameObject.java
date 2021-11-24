@@ -1,10 +1,10 @@
 package ru.javabegin.training.goldman.abstracts;
 
 
+import ru.javabegin.training.goldman.interfaces.gameobjects.StaticObject;
 import ru.javabegin.training.goldman.objects.Coordinate;
 import ru.javabegin.training.goldman.enums.GameObjectType;
 import javax.swing.ImageIcon;
-import ru.javabegin.training.goldman.interfaces.StaticObject;
 
 import java.util.Objects;
 

@@ -5,6 +5,9 @@
 package ru.javabegin.training.goldman.gui;
 
 
+import ru.javabegin.training.goldman.enums.LocationType;
+import ru.javabegin.training.goldman.objects.gui.maps.JTableGameMap;
+
 /**
  *
  * @author Tim
@@ -14,7 +17,7 @@ public class FrameMainMenu extends javax.swing.JFrame {
     private FrameGame frameGame = new FrameGame();
     private FrameStat frameStat = new FrameStat();
     private FrameSavedGames frameLoadGame = new FrameSavedGames();
-    
+    private JTableGameMap gameMap = new JTableGameMap(LocationType.FS, "game.map");
 
     /**
      * Creates new form FrameMainMenu
@@ -148,6 +151,10 @@ public class FrameMainMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnNewGameActionPerformed
+        if (frameGame==null){
+            frameGame = new FrameGame();
+        }
+        frameGame.setMap(gameMap);
         frameGame.showFrame(this);
     }//GEN-LAST:event_jbtnNewGameActionPerformed
 

@@ -1,4 +1,4 @@
-package ru.javabegin.training.goldman.interfaces;
+package ru.javabegin.training.goldman.interfaces.gamemap;
 
 
 public interface GameMap {
